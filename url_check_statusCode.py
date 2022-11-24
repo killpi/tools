@@ -23,7 +23,7 @@ class URLScaner(threading.Thread):
             if self._urlqueue.empty():
             #判断队列为空，说明扫描完毕，跳出循环
                 break
-            #从url列表中取出端口，超时时间未1s
+            #从url列表中取出，超时时间未1s
             url = self._urlqueue.get(timeout=0.5)
 
             # print("当前检测:%s" % url)
@@ -103,13 +103,13 @@ def StartScan(urlsFilePath,threadNum):
     put_file_res(activeQueue,failQueue)
 
 if __name__ == '__main__':
-    # parser = optparse.OptionParser('Example: python %prog -f urls.txt -t 5 \n')
-    # #url文件
-    # parser.add_option('-f','--file',dest='urlsFilePath',type='string',help='your urls file')
-    # #线程数量
-    # parser.add_option('-t','--thread',dest='threadNum',default=10,type='int',help='scanning thread number')
+    parser = optparse.OptionParser('Example: python %prog -f urls.txt -t 5 \n')
+    #url文件
+    parser.add_option('-f','--file',dest='urlsFilePath',type='string',help='your urls file')
+    #线程数量
+    parser.add_option('-t','--thread',dest='threadNum',default=10,type='int',help='scanning thread number')
 
-    # (options, args) = parser.parse_args()
+    (options, args) = parser.parse_args()
 
-    # StartScan(options.urlsFilePath,options.threadNum)
-    StartScan("./urls.txt",2)
+    StartScan(options.urlsFilePath,options.threadNum)
+
