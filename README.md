@@ -8,3 +8,5 @@ url_check_statusCode.py  url存活检测
 - [ ] 增加选项，结果中获取title
 
 rdm_create_info.py	随机个人测试信息生成
+
+phpmyadmin_4_8_5_brute.py   密码爆破
