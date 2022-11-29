@@ -10,3 +10,5 @@ url_check_statusCode.py  url存活检测
 rdm_create_info.py	随机个人测试信息生成
 
 phpmyadmin_4_8_5_brute.py   密码爆破
+
+403_bypass  参考了其他的，根据自己的风格来
