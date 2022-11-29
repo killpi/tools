@@ -12,3 +12,5 @@ rdm_create_info.py	随机个人测试信息生成
 phpmyadmin_4_8_5_brute.py   密码爆破
 
 403_bypass  参考了其他的，根据自己的风格来
+
+fscan_res_cl  整理fscan的扫描结果，根据ip进行分类，输出为md文件
